@@ -44,6 +44,8 @@ jobs:
         timeout-minutes: 5
         run: |
           docker compose up -d
+          chmod +x ./scripts/wait-for.sh
+          chmod +x ./scripts/wait-script.sh
           ./scripts/wait-script.sh
           
       - name: Sleep for 30 seconds
